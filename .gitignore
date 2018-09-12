@@ -1,0 +1,13 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+.DS_Store
+package-lock.json
+*.lock
+*.swp
+
+nodemon.json

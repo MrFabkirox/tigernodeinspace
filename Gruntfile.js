@@ -31,7 +31,7 @@ module.exports = function(grunt){
       { cmd: 'ls' }
     },
     
-/*     checkPages: {
+    /*     checkPages: {
       development: {
         options: {
           pageUrls: [

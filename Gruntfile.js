@@ -31,7 +31,7 @@ module.exports = function(grunt){
       { cmd: 'ls' }
     },
     
-    checkPages: {
+/*     checkPages: {
       development: {
         options: {
           pageUrls: [
@@ -58,9 +58,9 @@ module.exports = function(grunt){
           maxResponseTime: 500
         }
       }
-    }
+    } */
 
   })
 
-  grunt.registerTask('default', ['eslint','cafemocha','run','exec','checkPages'])
+  grunt.registerTask('default', ['eslint','cafemocha','run','exec',/* 'checkPages' */])
 }

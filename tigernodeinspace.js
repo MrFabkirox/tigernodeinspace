@@ -26,6 +26,7 @@ app.use(function(req, res, next){
   next()
 })
 
+// Mocha testing with Chai
 app.use(function(req, res, next){
   res.locals.showTests = app.get("env") !== "production" &&
   req.query.test === "1"

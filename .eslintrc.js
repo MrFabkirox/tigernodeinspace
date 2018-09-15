@@ -27,10 +27,6 @@ module.exports = {
         "no-unused-vars": [
             "warn"
         ],
-        "quotes": [
-            "error",
-            "double"
-        ],
         "semi": [
             "error",
             "never"

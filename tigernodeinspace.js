@@ -14,10 +14,12 @@ app.set("view engine", "handlebars")
     }
 });*/
 
+// app.use(bodyParser.urlencoded({ extends: true }))
 app.set("port", process.env.PORT || 3000)
 
 //app.use(express.static(path.join(__dirname + '/public'));
 app.use(express.static(__dirname + "/public"))
+app.use(require('body-parser')())
 
 // partials
 app.use(function(req, res, next){
@@ -36,11 +38,24 @@ app.use(function(req, res, next){
 // routes
 var fortunes = require("./lib/fortunes")
 app.get("/", function(req, res){
-    
   res.render("home", {
     fortune: fortunes.getFortune(),
     pageTestScript: "/qa/tests-home.js"
   })
+})
+
+app.post("/quote", function(req, res){
+  console.log('Form (from querystring): ' +
+    req.query.form)
+  console.log('CSRF token (from hidden form field): ' +
+    req.body._csrf)
+  console.log('Name (from visible form field): ' +
+    req.body.name)
+  console.log('Quote (from visible form field): ' +
+    req.body.quote)
+  console.log('From (from visible form field): ' +
+    req.body.from)
+  res.redirect(303, '/thank-you')
 })
 
 app.get("/quotes", function(req, res){

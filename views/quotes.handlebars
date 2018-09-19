@@ -1,11 +1,27 @@
-<h2>tigernodeinspace home handlebars</h2>
+<h2>Interesting Quotes</h2>
 
-<p>1</p>
+<h2>Add a quote</h2>
 
+<form role="form"
+  action="/process?form=quote" method="POST">
 
-<p>
-    <img href="public/img/tigerlogo.png" alt="logo">
-</p>
+  <input type="hidden" name="_csrf" value="{{csrf}}">
+
+  <div>
+    <input placeholder="Name" type="text"
+      id="fieldName" name="name">
+  </div>
+
+  <div>
+    <input placeholder="Quote" type="text"
+      id="fieldQuote" name="quote">
+  </div>
+
+  <div>
+    <button type="submit">Post</button> </div>
+  </div>
+
+</form>
 
 <p>
     Interesting quotes.

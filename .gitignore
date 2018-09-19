@@ -1,13 +1,15 @@
 # package directories
 node_modules
 jspm_packages
+package-lock.json
 
 # Serverless directories
 .serverless
 
+# mac
 .DS_Store
-package-lock.json
 *.lock
 *.swp
 
+# variables
 nodemon.json

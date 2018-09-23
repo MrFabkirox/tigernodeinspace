@@ -70,6 +70,12 @@ app.get("/about", function(req, res){
   })
 })
 
+app.get("/other", function(req, res){
+  res.render("other", {
+    pageTestScript: "/qa/tests-about.js"
+  })
+})
+
 app.use(function(req, res, next){
   res.type("text/plain")
   res.status(404)

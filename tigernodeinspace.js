@@ -58,6 +58,12 @@ app.post("/quote", function(req, res){
   res.redirect(303, '/thank-you')
 })
 
+app.get("/forum", function(req, res){
+  res.render("forum", {
+    pageTestScript: "/qa/tests-quotes.js"
+  })
+})
+
 app.get("/quotes", function(req, res){
   res.render("quotes", {
     pageTestScript: "/qa/tests-quotes.js"
@@ -72,6 +78,12 @@ app.get("/about", function(req, res){
 
 app.get("/other", function(req, res){
   res.render("other", {
+    pageTestScript: "/qa/tests-about.js"
+  })
+})
+
+app.get("/contact", function(req, res){
+  res.render("contact", {
     pageTestScript: "/qa/tests-about.js"
   })
 })

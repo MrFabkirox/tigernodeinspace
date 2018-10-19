@@ -27,6 +27,6 @@
     "test": "grunt",
     "start": "node tigernodeinspace.js"
   },
-  "author": "",
+  "author": "Fabrice Esope",
   "license": "ISC"
 }

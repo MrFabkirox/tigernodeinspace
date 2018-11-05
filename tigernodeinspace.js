@@ -55,7 +55,7 @@ app.post("/quote", function(req, res){
     req.body.quote)
   console.log('From (from visible form field): ' +
     req.body.from)
-  res.redirect(303, '/thank-you');
+  res.redirect(303, '/thank-you')
 })
 
 app.get("/forum", function(req, res){
